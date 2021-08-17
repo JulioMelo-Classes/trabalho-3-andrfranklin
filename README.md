@@ -23,13 +23,13 @@ g++ src/*.cpp -o main -I./include
 No windows você pode compilar usando o g++ ou o cl de forma análoga:
 
 ```bash
-g++ src/*.cpp -o main -I../include
+g++ src/*.cpp -o main -I./include
 .\main.exe
 ```
 ou usando o CL
 
 ```bash
-cl src/*.cpp -I../include
+cl src/*.cpp -I./include
 .\Snaze.exe
 ```
 
