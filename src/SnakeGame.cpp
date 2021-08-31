@@ -94,7 +94,6 @@ void SnakeGame::process_actions()
         cin >> std::ws >> choice;
         break;
     case RUNNING: //
-        cout<< "cobra se moveu? " << snake.getMovedState()<<endl;
         if (!snake.getMovedState())
         {
             pair<int, int> lC = levels[level - 1].getInitialPosition();
@@ -105,22 +104,11 @@ void SnakeGame::process_actions()
             snake = s;
         }
 
-        if (food.getState())
-        {
-            this->newFood();
-        }
-
         // if (playerS.getHasSolution() == false)
         // {
         //     playerS.findSolution(snake.getHeadLocal(), levels[level-1].getMaze().getBinaryWalls());
         // }else{
         // }
-            playerS.nextMove(snake);
-        
-        //valida se a cobra bateu no muro
-        this->isOver();
-        
-
         break;
     default:
         //nada pra fazer aqui
@@ -136,6 +124,24 @@ void SnakeGame::update()
     case RUNNING:
         if (frameCount > 0 && frameCount % 10 == 0) //depois de 10 frames o jogo pergunta se o usuário quer continuar
             state = WAITING_USER;
+
+        //move a cobra pelo labirinto
+        snake.move(playerS.nextMove(snake, levels[level-1].getMaze()));
+
+        //valida se a cobra bateu no muro
+        this->isOver();
+
+        //verifica se a cobra comeu a comida
+        if(snake.getHeadLocal().second.first == food.getPosition().first && snake.getHeadLocal().second.second == food.getPosition().second){
+            food.setState();
+            score = score + 10;
+        }
+
+        //valida se tem comida no mapa
+        if (food.getState())
+        {
+            this->newFood();
+        }
         break;
     case WAITING_USER: //se o jogo estava esperando pelo usuário então ele testa qual a escolha que foi feita
         if (choice == "n")
@@ -217,13 +223,13 @@ void SnakeGame::render()
                         cout << "v";
                         break;
                     case 2:
-                        cout << "^";
-                        break;
-                    case 3:
                         cout << ">";
                         break;
-                    case 4:
+                    case 3:
                         cout << "<";
+                        break;
+                    case 4:
+                        cout << "^";
                         break;
                     }
                 }

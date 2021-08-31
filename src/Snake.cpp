@@ -52,27 +52,15 @@ void Snake::newDefault(std::pair<int, std::pair<int,int>> head_, int life_ ){
 * @param int para a próxima ação da cobra
 **/
 void Snake::move(int action){
-
-    cout<<action<<endl;
-
     switch (action)
     {
     case CONTINUE:
         moved = true;
 
-
-
         switch (head.first)
         {
         case UP:
-            cout<<"subindo"<<endl;
-            cout<<"linha: "<< head.second.first <<", coluna: " << head.second.second << endl;
-            // this->head.second.first -= 1;
             head.second.first -= 1;
-            break;
-        
-        case DOWN:
-            head.second.first += 1;
             break;
 
         case LEFT:
@@ -82,15 +70,56 @@ void Snake::move(int action){
         case RIGHT:
             head.second.second += 1;
             break;
+
+        case DOWN:
+            head.second.first += 1;
+            break;
         }
         break;
     
     case TURN_L:
+        if (head.first == 1)
+        {
+            head.first = 2;
+        }
         
+        else if (head.first == 2)
+        {
+            head.first = 4;
+        }
+
+        else if (head.first == 3)
+        {
+            head.first = 1;
+        }
+
+        else if (head.first == 4)
+        {
+            head.first = 3;
+        }
+
         break;
 
     case TURN_R:
+        if (head.first == 1)
+        {
+            head.first = 3;
+        }
         
+        else if (head.first == 2)
+        {
+            head.first = 1;
+        }
+        
+        else if (head.first == 3)
+        {
+            head.first = 4;
+        }
+        
+        else if (head.first == 4)
+        {
+            head.first = 2;
+        }
         break;
     }
 }

@@ -9,9 +9,9 @@ class Snake
 private:
     enum HeadPosition {
         UP = 1,
-        DOWN,
         LEFT,
         RIGHT,
+        DOWN,
     };
     enum Movements {
         CONTINUE = 1,

@@ -2,6 +2,7 @@
 #define Player_h
 
 #include "Snake.h"
+#include "Maze.h"
 
 #include "vector"
 
@@ -29,7 +30,7 @@ public:
     * @brief método que realiza o próximo movimento da cobra
     * @param Snake objeto para realizar a ação da cobra
     **/
-    void nextMove(Snake &s);
+    int nextMove(Snake &s, Maze labirinto);
 
     /**
     * @brief método que retorna se uma solução já existe armazenada na memória do jogador
