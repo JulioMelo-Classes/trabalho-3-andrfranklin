@@ -30,16 +30,67 @@ O `maze1.txt` possui um caso de teste de impressão para paredes invisíveis, co
 
 ## Avaliação CP1
 
-1. Snake/Pacman: O jogo deveria conter o modo snake/pacman. 50% Apenas o modo pacman foi entregue.
-2. Render.ui: O jogo deveria desenhar a UI corretamente, mostrando ao menos as vidas, o nível e o score. OK 
-3. Render.mapa: O jogo deveria desenhar o mapa corretamente, com base no arquivo passado como argumento. Ok
-4. Render.snake: O jogo deveria desenhar a snake corretamente. Ok
-5. Transição de mapas: O jogo deve ter transição de mapa uma vez que um mapa é terminado. Não implementado.
-6. Interação com o usuário: O jogo deve perguntar ao usuário se quer continuar/reiniciar o nível/reiniciar o jogo a cada
-transição de mapa. Não feito 0%.
-7. Classe Level ou similar: O software deve encapsular as funcionalidades do nível em uma classe. OK
-8. Classe Player ou similar: O software deve encapsular as decisões do jogo em uma classe. OK
-9. Classe Snake ou similar: O software deve encapsular as funcionalidades relacionadas à snake em uma classe. OK
+### Snake/Pacman
+O jogo deveria conter o modo snake/pacman. Em ambos os modos não é possível andar pra trás. No modo snake deve ser desenhado o corpo.
+
+**Avaliação**
+
+50% Apenas o modo pacman foi entregue.
+
+### Render.ui
+O jogo deveria desenhar a UI corretamente, mostrando ao menos as vidas, o nível e o score.
+
+**Avaliação**
+
+Ok
+
+### Render.mapa
+O jogo deveria desenhar o mapa corretamente, com base no arquivo passado como argumento. Ok
+
+**Avaliação**
+
+Ok
+
+### Render.snake
+O jogo deveria desenhar a snake corretamente.
+
+**Avaliação**
+Ok
+
+### Transição de mapas
+O jogo deve ter transição de mapa uma vez que um mapa é terminado. Não implementado.
+
+**Avaliação**
+
+Não implementado.
+
+### Interação com o usuário
+O jogo deve perguntar ao usuário se quer continuar/reiniciar o nível/reiniciar o jogo a cada transição de mapa
+
+**Avaliação**
+
+Não implementado.
+
+### Classe Level ou similar
+O software deve encapsular as funcionalidades do nível em uma classe.
+
+**Avaliação**
+
+Ok
+
+### Classe Player ou similar
+O software deve encapsular as decisões do jogo em uma classe.
+
+**Avaliação**
+
+Ok
+
+### Classe Snake ou similar
+O software deve encapsular as funcionalidades relacionadas à snake em uma classe. 
+
+**Avaliação**
+
+OK
 
 ## Comentários gerais CP1
 
