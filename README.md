@@ -57,6 +57,14 @@ O jogo deveria desenhar a snake corretamente.
 **Avaliação**
 Ok
 
+### Logic.colisão e Logic.comida
+O jogo deve se comportar corretamente quando ocorre uma colisão com comida e com paredes.
+
+**Avaliação**
+
+ok
+
+
 ### Transição de mapas
 O jogo deve ter transição de mapa uma vez que um mapa é terminado. Não implementado.
 
