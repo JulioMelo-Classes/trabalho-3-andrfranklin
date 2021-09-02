@@ -122,8 +122,8 @@ void SnakeGame::update()
     switch (state)
     {
     case RUNNING:
-        if (frameCount > 0 && frameCount % 10 == 0) //depois de 10 frames o jogo pergunta se o usuário quer continuar
-            state = WAITING_USER;
+        //if (frameCount > 0 && frameCount % 10 == 0) //depois de 10 frames o jogo pergunta se o usuário quer continuar
+        //    state = WAITING_USER;
 
         //move a cobra pelo labirinto
         snake.move(playerS.nextMove(snake, levels[level-1].getMaze()));

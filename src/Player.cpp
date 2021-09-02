@@ -27,6 +27,13 @@ bool Player::findSolution(pair<int, pair<int, int>> head_, vector<vector<int>> l
 * @brief método que realiza o próximo movimento da cobra
 * @param Snake objeto para realizar a ação da cobra
 **/
+
+/*
+Como conversamos, acho que daria para otimizar um pouco esse método, mas está ok.
+
+Encotrei um bug no mapa maze2.txt, a cobra nunca se move, como se ficasse girando para os lados e nunca movesse.
+Nesse caso diz respeito à restrição da cobra nunca poder voltar, como você implementou ela, pode ser um bug.
+*/
 int Player::nextMove(Snake &s, Maze labirinto)
 {
     // if (directions.size() < 1)
